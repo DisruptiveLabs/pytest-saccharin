@@ -3,8 +3,9 @@
 pytest_sugar
 ~~~~~~~~~~~~
 
-pytest-sugar is a plugin for pytest that changes the default look
-and feel of pytest (e.g. progressbar, show tests that fail instantly).
+pytest-saccharin is a updated fork of pytest-sugar, a plugin
+ for pytest that changes the default look and feel of pytest
+ (e.g. progressbar, show tests that fail instantly).
 
 :copyright: see LICENSE for details
 :license: BSD, see LICENSE for more details.
@@ -28,7 +29,7 @@ import pytest
 from _pytest.terminal import TerminalReporter
 
 
-__version__ = '0.9.4'
+__version__ = '0.9.5'
 
 LEN_RIGHT_MARGIN = 0
 LEN_PROGRESS_PERCENTAGE = 5
