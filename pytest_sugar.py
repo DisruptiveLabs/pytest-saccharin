@@ -29,7 +29,7 @@ import pytest
 from _pytest.terminal import TerminalReporter
 
 
-__version__ = '0.9.5'
+__version__ = '0.9.5.post0'
 
 LEN_RIGHT_MARGIN = 0
 LEN_PROGRESS_PERCENTAGE = 5
@@ -304,11 +304,10 @@ class SugarTerminalReporter(TerminalReporter):
                     theme = THEME['progressbar_fail']
 
                 if last < block:
-                    progressbar += colored(bar[last:block],
+                    progressbar += colored(bar[last:min(len(bar), block)],
                                            last_theme,
                                            on_color)
-
-                progressbar += colored(bar[block],
+                progressbar += colored(bar[min(len(bar), block)],
                                        theme,
                                        on_color)
                 last = block + 1
